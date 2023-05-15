@@ -5,14 +5,14 @@ import { Logo } from './icons/logo';
 
 export const Header = () => {
   return (
-    <header className='fixed top-0 left-0 w-full border-b border-white-a08'>
+    <header className='fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
       <Container className='flex h-[var(--navigation-height)] '>
         <Link className='flex items-center text-md' href='/'>
           <Logo className='w-[1.8rem] h-[1.8rem] mr-4' /> Linear
         </Link>
 
         <nav className='h-full'>
-          <ul className='flex items-center h-full [&_a]:text-sm [&_li]:ml-6'>
+          <ul className='flex items-center h-full [&_a]:text-sm [&_a:hover]:text-grey [&_a]:transition-colors [&_li]:ml-6'>
             <li>
               <Link href='#'>Features</Link>
             </li>
