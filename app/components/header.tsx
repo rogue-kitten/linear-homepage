@@ -11,10 +11,10 @@ import { Logo } from './icons/logo';
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className='fixed top-0 left-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
+    <header className='fixed left-0 top-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
       <Container className='flex h-[var(--navigation-height)] '>
         <Link className='flex items-center text-md' href='/'>
-          <Logo className='w-[1.8rem] h-[1.8rem] mr-4' /> Linear
+          <Logo className='mr-4 h-[1.8rem] w-[1.8rem]' /> Linear
         </Link>
 
         <div
@@ -25,14 +25,14 @@ export const Header = () => {
         >
           <nav
             className={classNames(
-              'h-[calc(100vh_-_var(--navigation-height))] transition-opacity duration-500 fixed top-[var(--navigation-height)] left-0 w-full bg-background overflow-auto md:block md:relative md:top-0 md:h-auto md:w-auto md:bg-transparent md:opacity-100 ',
+              'fixed left-0 top-[var(--navigation-height)] h-[calc(100vh_-_var(--navigation-height))] w-full overflow-auto bg-background transition-opacity duration-500 md:relative md:top-0 md:block md:h-auto md:w-auto md:bg-transparent md:opacity-100 ',
               isOpen ? 'opacity-100' : 'opacity-0'
             )}
           >
             <ul
               className={classNames(
-                'flex flex-col md:flex-row md:items-center h-full [&_li]:ml-8 [&_li]:border-b [&_li]:border-grey-dark md:[&_li]:border-none',
-                '[&_a]:text-md [&_a:hover]:text-grey [&_a]:transition-[color, transform] md:[&_a]:translate-y-0 [&_a]:flex [&_a]:duration-200 [&_a]:items-center [&_a]:translate-y-8 [&_a]:h-[var(--navigation-height)] [&_a]:w-full md:[&_a]:text-sm',
+                'flex h-full flex-col md:flex-row md:items-center [&_li]:ml-8 [&_li]:border-b [&_li]:border-grey-dark md:[&_li]:border-none',
+                '[&_a]:transition-[color, transform] [&_a:hover]:text-grey [&_a]:flex [&_a]:h-[var(--navigation-height)] [&_a]:w-full [&_a]:translate-y-8 [&_a]:items-center [&_a]:text-md [&_a]:duration-200 md:[&_a]:translate-y-0 md:[&_a]:text-sm',
                 isOpen && '[&_a]:translate-y-0'
               )}
             >
@@ -61,8 +61,8 @@ export const Header = () => {
           </nav>
         </div>
 
-        <div className='ml-auto h-full flex items-center'>
-          <Link href='#' className='text-sm mr-6'>
+        <div className='ml-auto flex h-full items-center'>
+          <Link href='#' className='mr-6 text-sm'>
             Log in
           </Link>
           <Button href='#'>Sign Up</Button>
