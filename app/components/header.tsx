@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Button } from './button';
 import { Container } from './container';
 import { Logo } from './icons/logo';
 
@@ -40,7 +41,7 @@ export const Header = () => {
           <Link href='#' className='text-sm mr-6'>
             Log in
           </Link>
-          <Link href='#'>Sign Up</Link>
+          <Button href='#'>Sign Up</Button>
         </div>
       </Container>
     </header>
