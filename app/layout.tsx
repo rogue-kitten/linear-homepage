@@ -1,4 +1,5 @@
 import { Container } from './components/container';
+import { Footer } from './components/footer';
 import { Header } from './components/header';
 import './globals.css';
 
@@ -24,9 +25,7 @@ export default function RootLayout({
         <div>
           <Header />
           <main className='pt-[var(--navigation-height)]'>{children}</main>
-          <footer>
-            <Container>footer</Container>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>
