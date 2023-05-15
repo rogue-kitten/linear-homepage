@@ -8,9 +8,11 @@ module.exports = {
   theme: {
     colors: {
       white: '#ffffff',
+      transparent: "transparent",
       "white-a08": "rgba(255, 255, 255, 0.08)",
       background: "#000212",
-      grey: 'rgb(138, 143, 152)'
+      grey: 'rgb(138, 143, 152)',
+      'grey-dark': '#222326'
     },
     fontSize: {
       xs: '1.3rem',
