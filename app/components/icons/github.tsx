@@ -6,6 +6,7 @@ export const GithubIcon = () => (
     fill='currentColor'
     role='img'
     focusable='false'
+    className='transition-colors duration-300 hover:text-white'
   >
     <path
       fillRule='evenodd'
