@@ -5,14 +5,17 @@ export default function Home() {
   return (
     <Container>
       <Hero>
-        <HeroTitle>
-          Linear is a better way <br /> to build products
-        </HeroTitle>
-        <HeroSubtitle>
-          Meet the new standard for modern software development.
-          <br />
-          Streamline issues, sprints, and product roadmaps.
-        </HeroSubtitle>
+        <div className='px-8'>
+          <HeroTitle>
+            Linear is a better way <br className='hidden md:block' /> to build
+            products
+          </HeroTitle>
+          <HeroSubtitle>
+            Meet the new standard for modern software development.
+            <br className='hidden md:block' />
+            Streamline issues, sprints, and product roadmaps.
+          </HeroSubtitle>
+        </div>
         <img src='/image/hero.webp' alt='Hero Image' />
       </Hero>
     </Container>

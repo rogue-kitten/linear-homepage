@@ -16,4 +16,14 @@
   .text-shadow {
     text-shadow: rgba(0, 0, 0, 0.56) 0px 3px 12px;
   }
+
+  .text-gradient {
+    background: linear-gradient(
+      to right bottom,
+      rgb(255, 255, 255) 30%,
+      rgba(255, 255, 255, 0.38)
+    );
+    background-clip: text;
+    color: transparent;
+  }
 }
