@@ -7,9 +7,12 @@ module.exports = {
   ],
   theme: {
     colors: {
-      white: '#ffffff',
+      white: '#f7f8f8',
       transparent: "transparent",
+      "white-a05": "rgba(255, 255, 255, 0.05)",
       "white-a08": "rgba(255, 255, 255, 0.08)",
+      "white-a10": "rgba(255, 255, 255, 0.1)",
+      "white-a20": "rgba(255, 255, 255, 0.2)",
       background: "#000212",
       grey: 'rgb(138, 143, 152)',
       'grey-dark': '#222326',
@@ -46,7 +49,8 @@ module.exports = {
       9: '3.6rem',
       10: '4rem',
       11: '4.4rem',
-      12: '4.8rem'
+      12: '4.8rem',
+      16: '6.4rem'
     },
     backgroundImage: {
       "primary-gradient": 'linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)',
