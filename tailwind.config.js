@@ -58,6 +58,15 @@ module.exports = {
     },
     boxShadow: {
       primary: 'rgba(80, 63, 205, 0.5) 0px 1px 40px'
+    },
+    keyframes: {
+      "fade-in": {
+        from: { opacity: 0, transform: "translateY(-10px)" },
+        to: { opacity: 1, transform: "none" },
+      },
+    },
+    animation: {
+      "fade-in": "fade-in 1000ms var(--animation-delay, 0ms) ease forwards",
     }
   },
   plugins: [],

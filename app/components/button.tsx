@@ -4,6 +4,7 @@ import Link from 'next/link';
 interface ButtonProps extends VariantProps<typeof buttonClass> {
   children: React.ReactNode;
   href: string;
+  className?: string;
 }
 
 const buttonClass = cva(
@@ -15,10 +16,8 @@ const buttonClass = cva(
           'bg-primary-gradient hover:text-shadow hover:shadow-primary transition-[shadow, text-shadow] ease-in',
         secondary:
           'text-white bg-white-a10 border border-white-a05 hover:bg-white-a20 backdrop-filter-[12px] transition-colors ease-in',
-        tertiary: 'text-white bg-white-a05',
       },
       size: {
-        tiny: 'text-xs px-2 h-5',
         small: 'text-xs px-3 h-7',
         medium: 'text-sm px-4 h-8',
         large: 'text-md px-6 h-12',
@@ -31,9 +30,18 @@ const buttonClass = cva(
   }
 );
 
-export const Button = ({ children, href, variant, size }: ButtonProps) => {
+export const Button = ({
+  children,
+  href,
+  variant,
+  size,
+  className,
+}: ButtonProps) => {
   return (
-    <Link className={buttonClass({ variant, size })} href={href}>
+    <Link
+      className={buttonClass({ variant, size, className: className })}
+      href={href}
+    >
       {children}
     </Link>
   );
