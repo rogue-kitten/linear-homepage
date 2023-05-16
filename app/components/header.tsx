@@ -2,7 +2,7 @@
 
 import classNames from 'classnames';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from './button';
 import { Container } from './container';
 import { Hamburger } from './icons/hamburger';
@@ -10,6 +10,23 @@ import { Logo } from './icons/logo';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    document.querySelector('html')?.classList.toggle('overflow-hidden', isOpen);
+  }, [isOpen]);
+
+  // edge case when the menu is open and then the user re-sizes the screen, it would lock the scroll
+  useEffect(() => {
+    const closeHamburgerMenu = () => setIsOpen(false);
+
+    window.addEventListener('orientationchange', closeHamburgerMenu);
+    window.addEventListener('resize', closeHamburgerMenu);
+
+    return () => {
+      window.removeEventListener('orientationchange', closeHamburgerMenu);
+      window.removeEventListener('resize', closeHamburgerMenu);
+    };
+  }, [setIsOpen]);
   return (
     <header className='fixed left-0 top-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
       <Container className='flex h-[var(--navigation-height)] '>
