@@ -28,7 +28,7 @@ export const Header = () => {
     };
   }, [setIsOpen]);
   return (
-    <header className='fixed left-0 top-0 w-full border-b border-white-a08 backdrop-blur-[12px]'>
+    <header className='fixed left-0 top-0 z-10 w-full border-b border-white-a08 backdrop-blur-[12px]'>
       <Container className='flex h-[var(--navigation-height)] '>
         <Link className='flex items-center text-md' href='/'>
           <Logo className='mr-4 h-[1.8rem] w-[1.8rem]' /> Linear

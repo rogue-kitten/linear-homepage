@@ -1,7 +1,9 @@
-import { Container } from './components/container';
+import { Open_Sans } from 'next/font/google';
 import { Footer } from './components/footer';
 import { Header } from './components/header';
 import './globals.css';
+
+const open_sans = Open_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Create Next App',
@@ -14,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='en'>
+    <html lang='en' className={open_sans.className}>
       <head>
         <meta
           name='viewport'
