@@ -1,6 +1,7 @@
 import { Button } from './components/button';
 import { Container } from './components/container';
 import { Hero, HeroSubtitle, HeroTitle } from './components/hero';
+import { HeroImage } from './components/heroImage';
 import { ChevronRight } from './components/icons/chevronRight';
 
 export default function Home() {
@@ -37,7 +38,7 @@ export default function Home() {
         >
           Get Started <ChevronRight className='ml-2' />
         </Button>
-        <img src='/image/hero.webp' alt='Hero Image' className='mt-[12.8rem]' />
+        <HeroImage />
       </Hero>
     </Container>
   );
