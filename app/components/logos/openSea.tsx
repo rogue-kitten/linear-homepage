@@ -1,6 +1,12 @@
-export const OpenSeaLogo = () => {
+export const OpenSeaLogo = ({ className }: { className?: string }) => {
   return (
-    <svg viewBox='0 0 180 54' fill='currentColor' role='img' focusable='false'>
+    <svg
+      viewBox='0 0 180 54'
+      fill='currentColor'
+      role='img'
+      className={className}
+      focusable='false'
+    >
       <path
         fill-rule='evenodd'
         clip-rule='evenodd'
