@@ -1,6 +1,12 @@
-export const RaycastLogo = () => {
+export const RaycastLogo = ({ className }: { className?: string }) => {
   return (
-    <svg viewBox='0 0 180 56' fill='currentColor' role='img' focusable='false'>
+    <svg
+      viewBox='0 0 180 56'
+      fill='currentColor'
+      role='img'
+      focusable='false'
+      className={className}
+    >
       <path
         fill-rule='evenodd'
         clip-rule='evenodd'

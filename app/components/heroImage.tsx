@@ -26,8 +26,6 @@ export const HeroImage = () => {
   };
 
   useEffect(() => {
-    if (!inView) return;
-
     const renderLine = (timeout: number) => {
       timeOutRef.current = setTimeout(() => {
         setBorderLines((prev) => [
@@ -60,7 +58,7 @@ export const HeroImage = () => {
           inView && 'before:animate-image-glow'
         )}
       >
-        <div className='absolute left-0 top-0 z-20 h-full w-full'>
+        <div className='absolute left-0 top-0 z-20 h-full w-full overflow-hidden'>
           {borderLines.map((line) => (
             <span
               onAnimationEnd={() => removeLines(line.id)}

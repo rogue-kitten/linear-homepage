@@ -42,7 +42,7 @@ export const Header = () => {
         >
           <nav
             className={classNames(
-              'fixed left-0 top-[var(--navigation-height)] h-[calc(100vh_-_var(--navigation-height))] w-full overflow-auto bg-background transition-opacity duration-500 md:relative md:top-0 md:block md:h-auto md:w-auto md:bg-transparent md:opacity-100 ',
+              'fixed left-0 top-[var(--navigation-height)] h-[calc(100vh_-_var(--navigation-height))] w-full overflow-auto bg-background transition-opacity duration-500 md:relative md:top-0 md:block md:h-auto md:w-auto md:bg-transparent md:font-medium md:opacity-100 ',
               isOpen ? 'opacity-100' : 'opacity-0'
             )}
           >

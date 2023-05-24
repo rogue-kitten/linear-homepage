@@ -24,9 +24,9 @@ export const Clients = () => {
       </HeroSubtitle>
       <div className='grid grid-cols-2 gap-x-6 gap-y-8 md:grid-cols-6 [&_svg]:mx-auto [&_svg]:max-w-[16rem]'>
         <RampLogo />
-        <LoomLogo />
+        <LoomLogo className='hidden md:block' />
         <VercelLogo />
-        <DescriptLogo />
+        <DescriptLogo className='hidden md:block' />
         <CashAppLogo />
         <RaycastLogo />
         <MercuryLogo />
