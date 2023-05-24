@@ -26,4 +26,26 @@
     background-clip: text;
     color: transparent;
   }
+
+  .sunrise-mask {
+    -webkit-mask-image: radial-gradient(
+      circle at center center,
+      #000000,
+      transparent 80%
+    );
+    mask-image: radial-gradient(
+      circle at center center,
+      #000000,
+      transparent 80%
+    );
+  }
+
+  .star-mask {
+    -webkit-mask-image: radial-gradient(
+      circle at center bottom,
+      black,
+      transparent
+    );
+    mask-image: radial-gradient(circle at center bottom, black, transparent);
+  }
 }

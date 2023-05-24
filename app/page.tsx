@@ -1,9 +1,11 @@
+import classNames from 'classnames';
 import { Button } from './components/button';
 import { Clients } from './components/clients';
 import { Container } from './components/container';
 import { Hero, HeroSubtitle, HeroTitle } from './components/hero';
 import { HeroImage } from './components/heroImage';
 import { ChevronRight } from './components/icons/chevronRight';
+import { Stars } from './components/icons/stars';
 
 export default function Home() {
   return (
@@ -47,6 +49,15 @@ export default function Home() {
       <Container className='mt-[12.8rem] text-center md:mt-[25.6rem]'>
         <Clients />
       </Container>
+      <div
+        className={classNames(
+          'sunrise-mask bg-sunrise-background relative mx-auto my-[-12.8rem] h-[60rem] overflow-hidden',
+          '[--color:#7877C6] before:absolute before:inset-0 before:h-full before:w-full before:bg-sunrise-gradient before:opacity-40',
+          'after:absolute after:-left-1/2 after:top-1/2 after:aspect-1/0.7 after:w-[200%] after:rounded-[50%] after:border-t after:border-[#7876c566] after:bg-background'
+        )}
+      >
+        <Stars />
+      </div>
     </>
   );
 }
