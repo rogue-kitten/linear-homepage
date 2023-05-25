@@ -48,4 +48,9 @@
     );
     mask-image: radial-gradient(circle at center bottom, black, transparent);
   }
+
+  .thunder-mask {
+    mask-image: linear-gradient(black, transparent 70%);
+    -webkit-mask-image: linear-gradient(black, transparent 70%);
+  }
 }

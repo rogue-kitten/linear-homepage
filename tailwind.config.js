@@ -31,7 +31,8 @@ module.exports = {
       '5xl': ['4rem'],
       '6xl': ['4.4rem', 1],
       '7xl': ['4.8rem', 1],
-      '8xl': ['8rem', 1],
+      '8xl': ['5.6rem', 1],
+      '9xl': ['8rem', 1],
     },
     fontFamily: {
       sans: '"SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif'
@@ -50,6 +51,7 @@ module.exports = {
       10: '4rem',
       11: '4.4rem',
       12: '4.8rem',
+      14: '5.6rem',
       16: '6.4rem'
     },
     aspectRatio: {
@@ -62,6 +64,8 @@ module.exports = {
       "hero-glow": "conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)",
       "glow-lines": "linear-gradient(var(--direction),#9d9bf2 0.43%,#7877c6 14.11%,rgba(120,119,198,0) 62.95%)",
       "sunrise-gradient": 'radial-gradient(circle at bottom center,var(--color),transparent 70%);',
+      "usp-gradient": "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%);",
+      "usp-gradient-2": "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.07));"
     },
     boxShadow: {
       primary: 'rgba(80, 63, 205, 0.5) 0px 1px 40px'
@@ -137,6 +141,14 @@ module.exports = {
           opacity: 0,
           transform: "translateY(45rem)"
         },
+      },
+      "thunder": {
+        "0%, 9%, 11%, 100%": {
+          fill: "transparent"
+        },
+        "10%": {
+          fill: "white"
+        }
       }
     },
     animation: {
@@ -145,7 +157,8 @@ module.exports = {
       'image-glow': "image-glow 4100ms 600ms ease-out forwards",
       "sketch-lines": "sketch-lines 1200ms ease-out forwards",
       "glow-lines-horizontal": "glow-lines-horizontal var(--duration) forwards",
-      "glow-lines-vertical": "glow-lines-vertical var(--duration) forwards"
+      "glow-lines-vertical": "glow-lines-vertical var(--duration) forwards",
+      "thunder": "thunder 2250ms calc(var(--index) * 20ms) linear infinite"
     }
   },
   plugins: [],
