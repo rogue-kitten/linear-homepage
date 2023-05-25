@@ -49,6 +49,15 @@
     mask-image: radial-gradient(circle at center bottom, black, transparent);
   }
 
+  .usp-mask {
+    mask: linear-gradient(black, black) content-box content-box,
+      linear-gradient(black, black);
+    -webkit-mask: linear-gradient(black, black) content-box content-box,
+      linear-gradient(black, black);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
   .thunder-mask {
     mask-image: linear-gradient(black, transparent 70%);
     -webkit-mask-image: linear-gradient(black, transparent 70%);

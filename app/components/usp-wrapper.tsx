@@ -5,9 +5,21 @@ interface WrapperProps {
   className?: string;
 }
 
-export const UspWrapper = ({ children, className }: WrapperProps) => {
+interface ParentWrapper extends WrapperProps {
+  OnMouseEnter?: () => void;
+  OnMouseLeave?: () => void;
+}
+
+export const UspWrapper = ({
+  children,
+  className,
+  OnMouseEnter,
+  OnMouseLeave,
+}: ParentWrapper) => {
   return (
     <div
+      onMouseEnter={OnMouseEnter}
+      onMouseLeave={OnMouseLeave}
       className={classNames(
         'relative flex min-h-[48rem] flex-col items-center justify-end rounded-[4.8rem] border border-white-a05 bg-usp-gradient p-8 text-center md:p-12',
         className,
