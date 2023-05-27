@@ -9,7 +9,7 @@ export const UspWrapper = ({ children, className }: WrapperProps) => {
   return (
     <div
       className={classNames(
-        'relative flex min-h-[48rem] flex-col items-center justify-end rounded-[4.8rem] border border-white-a05 bg-usp-gradient p-8 text-center md:p-12',
+        'md:snap relative order-[var(--order)] flex min-h-[48rem] min-w-full snap-center flex-col items-center justify-end rounded-[4.8rem] border border-white-a05 bg-usp-gradient p-8 text-center md:order-none md:min-w-0 md:p-12',
         className,
         'before:usp-mask before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-usp-gradient-2'
       )}

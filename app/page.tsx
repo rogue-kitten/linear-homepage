@@ -24,9 +24,7 @@ export default function Home() {
       >
         <Stars />
       </div>
-      <Container>
-        <UnlikeAnyTool />
-      </Container>
+      <UnlikeAnyTool />
     </>
   );
 }
