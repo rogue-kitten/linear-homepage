@@ -1,4 +1,5 @@
 import { cva, VariantProps } from 'class-variance-authority';
+import classNames from 'classnames';
 import Link from 'next/link';
 
 interface ButtonProps extends VariantProps<typeof buttonClass> {
@@ -44,5 +45,24 @@ export const Button = ({
     >
       {children}
     </Link>
+  );
+};
+
+export const ButtonHighlight = ({
+  children,
+  className,
+}: {
+  children?: React.ReactNode;
+  className?: string;
+}) => {
+  return (
+    <span
+      className={classNames(
+        'flex h-5 items-center justify-between rounded-full bg-white-a05 px-2',
+        className
+      )}
+    >
+      {children}
+    </span>
   );
 };
