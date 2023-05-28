@@ -23,7 +23,7 @@ export const UnlikeAnyTool = () => {
       </Container>
       <div className='h-[48rem] overflow-y-hidden md:mx-auto md:h-auto md:max-w-[120rem] md:overflow-y-auto'>
         <div className='flex flex-shrink-0 snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-12 md:grid md:grid-cols-6 md:gap-6 md:overflow-x-hidden md:px-8'>
-          <UspWrapper className='col-span-4 [--order:3]'>
+          <UspWrapper className='col-span-4 overflow-hidden [--order:3]'>
             <KeyboardShortcuts />
             <UspTitle>Built for your keyboard</UspTitle>
             <UspSubTitle>
@@ -32,7 +32,7 @@ export const UnlikeAnyTool = () => {
             </UspSubTitle>
           </UspWrapper>
           <UspWrapper className='col-span-2 [--order:1]'>
-            <div className={classNames('thunder-mask absolute mt-[-9.2rem]')}>
+            <div className={classNames('thunder-mask absolute top-[-9.2rem]')}>
               <Thunder />
             </div>
             <UspTitle>Breathtakingly fast</UspTitle>
@@ -47,7 +47,7 @@ export const UnlikeAnyTool = () => {
               size='small'
               variant='secondary'
               className={classNames(
-                'absolute bottom-[20rem] translate-y-5 opacity-0 duration-200 group-hover:translate-y-0 group-hover:opacity-100'
+                'absolute bottom-[20rem] md:translate-y-5 md:opacity-0 md:duration-200 md:group-hover:translate-y-0 md:group-hover:opacity-100'
               )}
             >
               <ButtonHighlight className='-ml-2 mr-2'>

@@ -5,7 +5,7 @@ export const ModernTeams = () => {
       width='557'
       height='557'
       fill='none'
-      className='pointer-events-none absolute top-[-8rem] w-[130%] select-none'
+      className='pointer-events-none absolute top-[-12.8rem] w-[130%] select-none md:top-[-8rem]'
     >
       <g strokeWidth='18' filter='url(#filter0_f_1706_102555)' opacity='0.4'>
         <path

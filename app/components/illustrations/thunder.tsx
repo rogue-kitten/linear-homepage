@@ -5,7 +5,7 @@ export const Thunder = () => (
     width='425'
     height='518'
     fill='none'
-    className='max-h-full max-w-full'
+    // className='max-h-full max-w-full'
   >
     <g strokeWidth='18' filter='url(#filter0_f_1706_102550)' opacity='0.4'>
       <path

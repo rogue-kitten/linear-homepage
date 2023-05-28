@@ -90,17 +90,17 @@ export const KeyboardShortcuts = () => {
   };
 
   return (
-    <div className='max-w-full'>
+    <div className='-mt-16 w-full'>
       <div
         ref={keyboardWrapperRef}
-        className='keybord-mask pointer-events-none w-full select-none'
+        className='keybord-mask pointer-events-none w-[200%] select-none md:w-full'
       >
         <KeyBoard />
       </div>
-      <div className='my-8 h-[4rem] w-full overflow-hidden'>
+      <div className='my-8 h-auto w-full overflow-hidden md:h-[4rem]'>
         <div
           ref={sliderRef}
-          className='shortcut-keys-mask flex min-h-[4rem] max-w-full snap-x snap-mandatory gap-2 overflow-auto pb-9'
+          className='shortcut-keys-mask hidden min-h-[4rem] max-w-full snap-x snap-mandatory gap-2 overflow-auto pb-9 md:flex'
         >
           {shortcuts.map((shortcut, idx) => (
             <Button
