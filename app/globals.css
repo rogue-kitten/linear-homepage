@@ -10,6 +10,18 @@
     @apply bg-background text-white;
     font-size: 62.5%;
   }
+
+  .data-highlighted .active rect:first-child {
+    fill-opacity: 0.4;
+  }
+
+  .data-highlighted .active rect:not(:first-child) {
+    stroke-opacity: 1;
+  }
+
+  .data-highlighted .active path {
+    fill-opacity: 1;
+  }
 }
 
 @layer utilities {
@@ -61,5 +73,35 @@
   .thunder-mask {
     mask-image: linear-gradient(black, transparent 70%);
     -webkit-mask-image: linear-gradient(black, transparent 70%);
+  }
+
+  .keybord-mask {
+    mask-image: linear-gradient(
+      transparent 0%,
+      rgba(0, 0, 0, 0.57) 33.98%,
+      black 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      transparent 0%,
+      rgba(0, 0, 0, 0.57) 33.98%,
+      black 100%
+    );
+  }
+
+  .shortcut-keys-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 40%,
+      black calc(60%),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 40%,
+      black calc(60%),
+      transparent 100%
+    );
   }
 }

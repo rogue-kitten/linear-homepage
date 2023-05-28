@@ -14,9 +14,6 @@ export const HomePageHero = () => {
       >
         Introducing Linear Insights
         <ButtonHighlight className='-mr-2 ml-2'>→</ButtonHighlight>
-        {/* <span className='-mr-2 ml-2 flex items-center justify-between rounded-full bg-white-a05 px-2'>
-          →
-        </span> */}
       </Button>
       <div className='px-6 md:px-8'>
         <HeroTitle className='translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]'>

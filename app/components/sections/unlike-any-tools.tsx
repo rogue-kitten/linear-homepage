@@ -1,10 +1,10 @@
 import classNames from 'classnames';
-import { Button } from '../button';
+import { Button, ButtonHighlight } from '../button';
 import { Container } from '../container';
 import { ChevronRight } from '../icons/chevronRight';
-import { KeyBoard } from '../illustrations/keyboard';
 import { ModernTeams } from '../illustrations/modern';
 import { Thunder } from '../illustrations/thunder';
+import { KeyboardShortcuts } from '../keyboard-shortcuts';
 import { UspSubTitle, UspTitle, UspWrapper } from '../usp-wrapper';
 
 export const UnlikeAnyTool = () => {
@@ -24,7 +24,7 @@ export const UnlikeAnyTool = () => {
       <div className='h-[48rem] overflow-y-hidden md:mx-auto md:h-auto md:max-w-[120rem] md:overflow-y-auto'>
         <div className='flex flex-shrink-0 snap-x snap-mandatory gap-3 overflow-x-auto px-6 pb-12 md:grid md:grid-cols-6 md:gap-6 md:overflow-x-hidden md:px-8'>
           <UspWrapper className='col-span-4 [--order:3]'>
-            <KeyBoard />
+            <KeyboardShortcuts />
             <UspTitle>Built for your keyboard</UspTitle>
             <UspSubTitle>
               Fly through your tasks with rapid-fire keyboard shortcuts for
@@ -47,12 +47,12 @@ export const UnlikeAnyTool = () => {
               size='small'
               variant='secondary'
               className={classNames(
-                'absolute bottom-[20rem] translate-y-5 opacity-0 transition-[transform,opacity] duration-200 group-hover:translate-y-0 group-hover:opacity-100'
+                'absolute bottom-[20rem] translate-y-5 opacity-0 duration-200 group-hover:translate-y-0 group-hover:opacity-100'
               )}
             >
-              <span className='-ml-2 mr-2 flex h-5 items-center rounded-full bg-white-a05 px-2'>
+              <ButtonHighlight className='-ml-2 mr-2'>
                 Linear Method
-              </span>
+              </ButtonHighlight>
               Product Principles <ChevronRight className='ml-2' />
             </Button>
             <UspTitle>Designed for modern software teams</UspTitle>
