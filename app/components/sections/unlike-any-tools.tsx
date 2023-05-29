@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import { Button, ButtonHighlight } from '../button';
+import { CommandMenu } from '../command-menu';
 import { Container } from '../container';
 import { ChevronRight } from '../icons/chevronRight';
 import { ModernTeams } from '../illustrations/modern';
@@ -60,11 +61,14 @@ export const UnlikeAnyTool = () => {
               Comes with built-in workflows that create focus and routine.
             </UspSubTitle>
           </UspWrapper>
-          <UspWrapper className='col-span-4 [--order:4]'>
-            <UspTitle>Meet your command line</UspTitle>
-            <UspSubTitle>
-              Complete any action in seconds with the global command menu.
-            </UspSubTitle>
+          <UspWrapper className='col-span-4 [--order:4]' reverse={true}>
+            <CommandMenu />
+            <div className='transition-opacity duration-300 [.opened+&]:opacity-0'>
+              <UspTitle>Meet your command line</UspTitle>
+              <UspSubTitle>
+                Complete any action in seconds with the global command menu.
+              </UspSubTitle>
+            </div>
           </UspWrapper>
         </div>
       </div>
