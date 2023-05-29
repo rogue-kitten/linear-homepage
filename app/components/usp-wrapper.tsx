@@ -1,17 +1,26 @@
 import classNames from 'classnames';
 
-interface WrapperProps {
+interface TextProps {
   children: React.ReactNode;
   className?: string;
 }
 
-export const UspWrapper = ({ children, className }: WrapperProps) => {
+interface WrapperProps extends TextProps {
+  reverse?: boolean;
+}
+
+export const UspWrapper = ({
+  children,
+  className,
+  reverse = false,
+}: WrapperProps) => {
   return (
     <div
       className={classNames(
-        'relative order-[var(--order)] flex min-h-[48rem] min-w-full snap-center flex-col items-center justify-end rounded-[4.8rem] border border-white-a05 bg-usp-gradient p-8 text-center md:order-none md:min-w-0 md:p-12',
+        'relative order-[var(--order)] flex min-h-[48rem] min-w-full snap-center flex-col items-center overflow-hidden rounded-[4.8rem] border border-white-a05 bg-usp-gradient p-8 text-center md:order-none md:min-w-0 md:p-12',
         className,
-        'before:usp-mask before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-usp-gradient-2'
+        'before:usp-mask before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-usp-gradient-2',
+        reverse ? 'justify-start' : 'justify-end'
       )}
     >
       {children}
@@ -19,13 +28,13 @@ export const UspWrapper = ({ children, className }: WrapperProps) => {
   );
 };
 
-export const UspTitle = ({ children, className }: WrapperProps) => {
+export const UspTitle = ({ children, className }: TextProps) => {
   return (
     <p className={classNames('text-3xl font-medium', className)}>{children}</p>
   );
 };
 
-export const UspSubTitle = ({ children, className }: WrapperProps) => {
+export const UspSubTitle = ({ children, className }: TextProps) => {
   return (
     <p
       className={classNames(
