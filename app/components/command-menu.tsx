@@ -64,19 +64,23 @@ const commandOptions = [
 export const CommandMenu = () => {
   const commandMenuRef = useRef<HTMLDivElement>(null);
   const [opened, setOpened] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
 
   useEffect(() => {
     const toggleState = (e: MouseEvent) => {
       const isMenuButton =
         e.target instanceof Element &&
-        (e.target.classList.contains('menu-button') ||
-          e.target.parentElement?.classList.contains('menu-button'));
+        (e.target.classList.contains('command-menu') ||
+          e.target.parentElement?.classList.contains('command-menu'));
 
       const clickedInside =
         isMenuButton || commandMenuRef.current?.contains(e.target as Node);
 
       setOpened(clickedInside ? true : false);
+
+      // if the user clicks outside, then set the state back to the home state
+      if (!clickedInside) setSelectedOption(null);
     };
 
     window.addEventListener('click', toggleState);
@@ -87,10 +91,17 @@ export const CommandMenu = () => {
   }, []);
 
   const currentOption = useMemo(() => {
-    return selectedOption === null
-      ? commandOptions
-      : commandOptions[selectedOption].subOptions;
-  }, [selectedOption]);
+    const options =
+      selectedOption === null
+        ? commandOptions
+        : commandOptions[selectedOption].subOptions;
+
+    if (searchValue === '') return options;
+
+    return [...options].filter((option) =>
+      option.label.toLowerCase().includes(searchValue.toLowerCase())
+    );
+  }, [selectedOption, searchValue]);
 
   return (
     <div
@@ -108,12 +119,18 @@ export const CommandMenu = () => {
       <input
         className='w-full bg-transparent p-5 text-lg outline-none'
         placeholder='Type a command to search...'
+        value={searchValue}
+        onChange={(e) => setSearchValue(e.target.value)}
       />
       <div className='flex w-full flex-col text-sm'>
         {currentOption.map(({ label, icon: Icon, ...props }, idx) => (
           <button
             key={idx}
             onClick={(e) => {
+              // if the modal is not open, don't do anything, wait for it to open
+              // event would then bubble up to the document and then the modal will open
+              if (!opened) return;
+
               const clickedRoot = 'subOptions' in props;
               setSelectedOption(clickedRoot ? idx : null);
               if (!clickedRoot) {
