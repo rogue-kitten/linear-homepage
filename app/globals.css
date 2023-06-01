@@ -104,4 +104,27 @@
       transparent 100%
     );
   }
+
+  .feature-image-mask {
+    -webkit-mask: linear-gradient(black, black) content-box content-box,
+      linear-gradient(black, black);
+    mask: linear-gradient(black, black) content-box content-box,
+      linear-gradient(black, black);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+  }
+
+  .feature-image-mask2 {
+    mask-image: linear-gradient(black, transparent);
+    -webkit-mask-image: linear-gradient(black, transparent);
+  }
+
+  .feature-mask {
+    mask-image: radial-gradient(100% 50% at center center, black, transparent);
+    -webkit-mask-image: radial-gradient(
+      100% 50% at center center,
+      black,
+      transparent
+    );
+  }
 }

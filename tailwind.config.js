@@ -54,6 +54,7 @@ module.exports = {
       11: '4.4rem',
       12: '4.8rem',
       14: '5.6rem',
+      15: '6rem',
       16: '6.4rem'
     },
     aspectRatio: {
@@ -67,7 +68,14 @@ module.exports = {
       "glow-lines": "linear-gradient(var(--direction),#9d9bf2 0.43%,#7877c6 14.11%,rgba(120,119,198,0) 62.95%)",
       "sunrise-gradient": 'radial-gradient(circle at bottom center,var(--color),transparent 70%);',
       "usp-gradient": "linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%);",
-      "usp-gradient-2": "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.07));"
+      "usp-gradient-2": "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.07));",
+      "feature-image": "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 120%)",
+      "feature-image2": "radial-gradient(ellipse 50% 50% at center,rgba(var(--feature-color),0.1),transparent)",
+      "feature-cards": "radial-gradient(ellipse at center,rgba(var(--feature-color),0.15), transparent)",
+      "feature-cards-mobile": "radial-gradient(ellipse at 50% 80%,rgba(var(--feature-color),0.15),transparent)",
+      "feature-cards2": "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
+      "feature": "radial-gradient(ellipse 100% 40% at 50% 60%,rgba(var(--feature-color),0.1),transparent)",
+      "feature-divider": "conic-gradient(from 90deg at 80% 50%,#000212,var(--feature-color))"
     },
     boxShadow: {
       primary: 'rgba(80, 63, 205, 0.5) 0px 1px 40px'

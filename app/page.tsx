@@ -3,6 +3,7 @@ import { Container } from './components/container';
 import { Stars } from './components/illustrations/stars';
 import { Clients } from './components/sections/clients';
 import { HomePageHero } from './components/sections/homepage-hero';
+import { IssueTracking } from './components/sections/issue-tracking';
 import { UnlikeAnyTool } from './components/sections/unlike-any-tools';
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
         <Stars />
       </div>
       <UnlikeAnyTool />
+      <IssueTracking />
     </>
   );
 }
