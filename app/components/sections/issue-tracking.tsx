@@ -7,7 +7,7 @@ import {
   IssuesIcon,
   ParentSubIcon,
   WorkflowsIcon,
-} from '../icons/features';
+} from '../icons/features/issue-tracking';
 
 export const IssueTracking = () => {
   return (
