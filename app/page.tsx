@@ -7,6 +7,7 @@ import { IssueTracking } from './components/sections/issue-tracking';
 import { MomentumCycles } from './components/sections/momentum-cycles';
 import { Roadmaps } from './components/sections/roadmaps';
 import { UnlikeAnyTool } from './components/sections/unlike-any-tools';
+import { Workflows } from './components/sections/workflows';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
       <IssueTracking />
       <MomentumCycles />
       <Roadmaps />
+      <Workflows />
     </>
   );
 }

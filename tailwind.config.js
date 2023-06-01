@@ -75,7 +75,10 @@ module.exports = {
       "feature-cards-mobile": "radial-gradient(ellipse at 50% 80%,rgba(var(--feature-color),0.15),transparent)",
       "feature-cards2": "linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))",
       "feature": "radial-gradient(ellipse 100% 40% at 50% 60%,rgba(var(--feature-color),0.1),transparent)",
-      "feature-divider": "conic-gradient(from 90deg at 80% 50%,#000212,var(--feature-color))"
+      "feature-divider": "conic-gradient(from 90deg at 80% 50%,#000212,var(--feature-color))",
+      "integrations": "linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 120%)",
+      "integrations2": 'linear-gradient(rgba(108, 56, 255, 0.3) 0%, rgba(139, 98, 255, 0.3) 100%)',
+      "ripple-gradient": "linear-gradient(90deg, rgb(21, 11, 48) 0%, rgb(91, 57, 184) 100%);"
     },
     boxShadow: {
       primary: 'rgba(80, 63, 205, 0.5) 0px 1px 40px'
@@ -159,6 +162,19 @@ module.exports = {
         "10%": {
           fill: "white"
         }
+      },
+      "ripple": {
+        "0%": {
+          opacity: 0,
+          transform: "translate(-50%, -50%) scale(0.9)"
+        },
+        "40%, 50%": {
+          opacity: 'var(--opacity)',
+          transform: "translate(-50%, -50%) scale(1)"
+        },
+        "100%": {
+          opacity: 0,
+        },
       }
     },
     animation: {
@@ -168,7 +184,8 @@ module.exports = {
       "sketch-lines": "sketch-lines 1200ms ease-out forwards",
       "glow-lines-horizontal": "glow-lines-horizontal var(--duration) forwards",
       "glow-lines-vertical": "glow-lines-vertical var(--duration) forwards",
-      "thunder": "thunder 2250ms calc(var(--index) * 20ms) linear infinite"
+      "thunder": "thunder 2250ms calc(var(--index) * 20ms) linear infinite",
+      "ripple": "ripple 3400ms calc(500ms + (var(--delay))) ease infinite backwards"
     }
   },
   plugins: [],
