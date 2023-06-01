@@ -91,7 +91,7 @@ interface FeaturesGridProps {
 
 const FeatureGrid = ({ features }: FeaturesGridProps) => {
   return (
-    <div className='mb-16 grid w-full grid-cols-4 gap-x-6 gap-y-9 md:mb-[14rem]  md:grid-cols-6'>
+    <div className=' grid w-full grid-cols-4 gap-x-6 gap-y-9  md:grid-cols-6'>
       {features.map(({ icon: Icon, text, title }, idx) => (
         <div
           key={idx}
@@ -121,7 +121,7 @@ const FeatureCards = ({ features }: FeatureCardProps) => {
   return (
     <div
       className={classNames(
-        'relative flex w-full flex-col justify-between gap-6 md:flex-row'
+        'relative mt-16 flex w-full flex-col justify-between gap-6 md:mt-[14rem] md:flex-row'
       )}
     >
       {features.map(({ image, title, text, imageClass }, idx) => (
