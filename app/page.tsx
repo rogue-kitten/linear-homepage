@@ -5,6 +5,7 @@ import { Clients } from './components/sections/clients';
 import { HomePageHero } from './components/sections/homepage-hero';
 import { IssueTracking } from './components/sections/issue-tracking';
 import { MomentumCycles } from './components/sections/momentum-cycles';
+import { Roadmaps } from './components/sections/roadmaps';
 import { UnlikeAnyTool } from './components/sections/unlike-any-tools';
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
       <UnlikeAnyTool />
       <IssueTracking />
       <MomentumCycles />
+      <Roadmaps />
     </>
   );
 }
