@@ -18,9 +18,9 @@ export const Features = ({ children, color, secondaryColor }: FeatureProps) => {
         } as CSSProperties
       }
       className={classNames(
-        'relative my-[25.2rem]',
+        'relative my-[12rem] md:my-[25.2rem]',
         'after:absolute after:inset-0 after:bg-feature',
-        'before:feature-mask before:absolute before:mb-[-40rem] before:h-[40rem] before:w-full before:translate-y-[-20rem] before:rotate-180 before:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--secondary-color))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--secondary-color)),#000212)] before:bg-[50%_100%,50%_100%] before:bg-no-repeat before:[background-position:1%_0%,99%_0%]'
+        'before:feature-mask before:absolute before:mb-[-42rem] before:h-[40rem] before:w-full before:translate-y-[-20rem] before:rotate-180 before:bg-[conic-gradient(from_90deg_at_60%_50%,#000212,rgba(var(--secondary-color))),conic-gradient(from_270deg_at_40%_50%,rgba(var(--secondary-color)),#000212)] before:bg-[50%_100%,50%_100%] before:bg-no-repeat before:[background-position:1%_0%,99%_0%] before:md:mb-[-40rem] before:md:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--secondary-color))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--secondary-color)),#000212)]'
       )}
     >
       <Container className='flex flex-col items-center pt-15'>
@@ -54,7 +54,7 @@ const MainFeature = ({
             imageSize === 'small' && 'md:w-[78rem] md:max-w-[90%]'
           )}
         >
-          <h2 className='text-gradient mb-11 pb-3 text-center text-7xl font-medium md:text-9xl'>
+          <h2 className='text-gradient mb-4 pb-3 text-center text-7xl font-medium md:mb-11 md:text-9xl'>
             {title}
           </h2>
           <div
@@ -91,7 +91,7 @@ interface FeaturesGridProps {
 
 const FeatureGrid = ({ features }: FeaturesGridProps) => {
   return (
-    <div className='mb-[14rem] grid w-full grid-cols-4 gap-x-6 gap-y-9  md:grid-cols-6'>
+    <div className='mb-16 grid w-full grid-cols-4 gap-x-6 gap-y-9 md:mb-[14rem]  md:grid-cols-6'>
       {features.map(({ icon: Icon, text, title }, idx) => (
         <div
           key={idx}
