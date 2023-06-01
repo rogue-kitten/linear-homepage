@@ -33,14 +33,27 @@ export const Features = ({ children, color, secondaryColor }: FeatureProps) => {
 interface MainFeatureProps {
   image: string;
   text: string;
+  maxWidth: string;
   title: React.ReactNode;
+  imageSize: 'small' | 'large';
 }
 
-const MainFeature = ({ image, text, title }: MainFeatureProps) => {
+const MainFeature = ({
+  image,
+  text,
+  title,
+  maxWidth,
+  imageSize,
+}: MainFeatureProps) => {
   return (
     <>
       <div className='relative w-full after:absolute after:inset-0 after:bg-feature-image2'>
-        <div className='mx-auto w-full text-center md:w-[78rem] md:max-w-[90%]'>
+        <div
+          className={classNames(
+            'mx-auto w-full text-center ',
+            imageSize === 'small' && 'md:w-[78rem] md:max-w-[90%]'
+          )}
+        >
           <h2 className='text-gradient mb-11 pb-3 text-center text-7xl font-medium md:text-9xl'>
             {title}
           </h2>
@@ -56,7 +69,10 @@ const MainFeature = ({ image, text, title }: MainFeatureProps) => {
         </div>
       </div>
       <div className='w-full text-center md:w-[78rem] md:max-w-[90%]'>
-        <p className='mx-auto mt-16 w-full max-w-[60rem] text-2xl leading-tight tracking-tight text-white md:my-16 md:text-4xl'>
+        <p
+          style={{ '--max-w': maxWidth } as CSSProperties}
+          className='mx-auto mt-16 w-full max-w-[var(--max-w)] text-2xl leading-tight tracking-tight text-white md:my-16 md:text-4xl'
+        >
           {text}
         </p>
         <hr className='mb-[7.2rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]' />

@@ -19,7 +19,9 @@ export const IssueTracking = () => {
       </Features.Title> */}
       <Features.Main
         text='Create tasks in seconds, discuss issues in context, and breeze through your work in views tailored to you and your team.'
+        maxWidth='60rem'
         image='/image/issues.webp'
+        imageSize='small'
         title={
           <>
             Issue tracking <br />
