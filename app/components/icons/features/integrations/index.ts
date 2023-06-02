@@ -1,3 +1,4 @@
+export * from './discord';
 export * from './figma';
 export * from './front';
 export * from './gitlab';
