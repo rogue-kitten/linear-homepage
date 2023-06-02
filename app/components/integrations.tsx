@@ -77,7 +77,10 @@ export const Integrations = () => {
                 '--size': size,
               } as CSSProperties
             }
-            className='absolute left-1/2 top-1/2 h-[var(--size)] w-[var(--size)] -translate-x-1/2 -translate-y-1/2 animate-ripple rounded-full border border-[#ac8eff] bg-ripple-gradient opacity-0'
+            className={classNames(
+              'absolute left-1/2 top-1/2 h-[var(--size)] w-[var(--size)] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#ac8eff] bg-ripple-gradient opacity-0',
+              inView && 'animate-ripple'
+            )}
           />
         ))}
       </div>

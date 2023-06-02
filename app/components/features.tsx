@@ -18,9 +18,9 @@ export const Features = ({ children, color, secondaryColor }: FeatureProps) => {
         } as CSSProperties
       }
       className={classNames(
-        'relative my-[12rem] md:my-[25.2rem]',
+        'relative z-[-1] my-[12rem] md:my-[25.2rem]',
         'after:absolute after:inset-0 after:bg-feature',
-        'before:feature-mask before:absolute before:mb-[-42rem] before:h-[40rem] before:w-full before:translate-y-[-20rem] before:rotate-180 before:bg-[conic-gradient(from_90deg_at_60%_50%,#000212,rgba(var(--secondary-color))),conic-gradient(from_270deg_at_40%_50%,rgba(var(--secondary-color)),#000212)] before:bg-[50%_100%,50%_100%] before:bg-no-repeat before:[background-position:1%_0%,99%_0%] before:md:mb-[-40rem] before:md:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--secondary-color))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--secondary-color)),#000212)]'
+        'before:feature-mask before:absolute before:mb-[-42rem] before:h-[40rem] before:w-full before:translate-y-[-20rem] before:rotate-180 before:scale-[2] before:bg-[conic-gradient(from_90deg_at_60%_50%,#000212,rgba(var(--secondary-color))),conic-gradient(from_270deg_at_40%_50%,rgba(var(--secondary-color)),#000212)] before:bg-[50%_100%,50%_100%] before:bg-no-repeat before:[background-position:1%_0%,99%_0%] before:md:mb-[-40rem] before:md:bg-[conic-gradient(from_90deg_at_80%_50%,#000212,rgb(var(--secondary-color))),conic-gradient(from_270deg_at_20%_50%,rgb(var(--secondary-color)),#000212)]'
       )}
     >
       <Container className='flex flex-col items-center pt-15'>
