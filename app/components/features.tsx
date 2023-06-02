@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import { CSSProperties } from 'react';
+import { Button } from './button';
 import { Container } from './container';
+import { Integrations } from './integrations';
 
 interface FeatureProps {
   children: React.ReactNode;
@@ -30,20 +32,30 @@ export const Features = ({ children, color, secondaryColor }: FeatureProps) => {
   );
 };
 
-interface MainFeatureProps {
-  image: string;
+interface BaseMainProps {
   text: string;
-  maxWidth: string;
   title: React.ReactNode;
-  imageSize: 'small' | 'large';
+  maxWidth: string;
 }
 
+interface WithOutImageProps {
+  buttonChildren: React.ReactNode;
+  imageSize?: never;
+}
+
+interface WithImageProps {
+  imageSize: 'small' | 'large';
+  image: string;
+}
+
+type MainFeatureProps = BaseMainProps & (WithOutImageProps | WithImageProps);
+
 const MainFeature = ({
-  image,
   text,
   title,
   maxWidth,
   imageSize,
+  ...props
 }: MainFeatureProps) => {
   return (
     <>
@@ -57,15 +69,19 @@ const MainFeature = ({
           <h2 className='text-gradient mb-4 pb-3 text-center text-7xl font-medium md:mb-11 md:text-9xl'>
             {title}
           </h2>
-          <div
-            className={classNames(
-              'relative w-full rounded-3xl',
-              'before:feature-image-mask before:absolute before:inset-0 before:rounded-[inherit] before:bg-feature-image before:p-[1px]',
-              'after:feature-image-mask2 after:absolute after:inset-0 after:rounded-[inherit] after:bg-white-a15'
-            )}
-          >
-            <img src={image} className='h-auto w-full' />
-          </div>
+          {'image' in props ? (
+            <div
+              className={classNames(
+                'relative w-full rounded-3xl',
+                'before:feature-image-mask before:absolute before:inset-0 before:rounded-[inherit] before:bg-feature-image before:p-[1px]',
+                'after:feature-image-mask2 after:absolute after:inset-0 after:rounded-[inherit] after:bg-white-a15'
+              )}
+            >
+              <img src={props.image} className='h-auto w-full' />
+            </div>
+          ) : (
+            <Integrations />
+          )}
         </div>
       </div>
       <div className='w-full text-center md:w-[78rem] md:max-w-[90%]'>
@@ -75,6 +91,11 @@ const MainFeature = ({
         >
           {text}
         </p>
+        {'buttonChildren' in props && (
+          <Button size='small' variant='secondary' className='-mt-3 mb-12'>
+            {props.buttonChildren}
+          </Button>
+        )}
         <hr className='mb-[7.2rem] h-[1px] border-none bg-[linear-gradient(to_right,transparent,rgba(255,255,255,0.1)_50%,transparent)]' />
       </div>
     </>
@@ -83,7 +104,7 @@ const MainFeature = ({
 
 interface FeaturesGridProps {
   features: {
-    icon: React.FC;
+    icon: React.FC | React.FC[];
     title: string;
     text: string;
   }[];
@@ -97,7 +118,15 @@ const FeatureGrid = ({ features }: FeaturesGridProps) => {
           key={idx}
           className='col-span-2 mx-auto max-w-none leading-relaxed md:max-w-[25.6rem] [&_svg]:mb-1 [&_svg]:mr-[0.6rem] [&_svg]:h-4 [&_svg]:w-4 [&_svg]:fill-white [&_svg]:md:inline'
         >
-          <Icon />
+          {Array.isArray(Icon) ? (
+            <>
+              {Icon.map((Elem, idx) => (
+                <Elem key={idx} />
+              ))}
+            </>
+          ) : (
+            <Icon />
+          )}
           <h4 className='inline text-sm font-medium md:text-md'>
             <span>{title}</span> <br className='block md:hidden' />
             <span className='text-primary-text'>{text}</span>
