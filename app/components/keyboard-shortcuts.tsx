@@ -27,7 +27,7 @@ export const KeyboardShortcuts = () => {
   const firstRender = useRef<boolean>(true);
 
   const scheduleTimeout = () =>
-    (timeoutRef.current = setTimeout(goToNextShortcut, 3000));
+    (timeoutRef.current = setTimeout(goToNextShortcut, 2500));
 
   useEffect(() => {
     if (firstRender.current) {

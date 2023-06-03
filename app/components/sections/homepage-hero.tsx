@@ -20,7 +20,7 @@ export const HomePageHero = () => {
           Linear is a better way <br className='hidden md:block' /> to build
           products
         </HeroTitle>
-        <HeroSubtitle className='translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]'>
+        <HeroSubtitle className='translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]'>
           Meet the new standard for modern software development.{' '}
           <br className='hidden md:block' />
           Streamline issues, sprints, and product roadmaps.
@@ -30,7 +30,7 @@ export const HomePageHero = () => {
         href='/'
         variant='primary'
         size='large'
-        className='translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]'
+        className='translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]'
       >
         Get Started <ChevronRight className='ml-2' />
       </Button>
