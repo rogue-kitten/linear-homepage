@@ -1,4 +1,5 @@
 import classNames from 'classnames';
+import Image from 'next/image';
 import { CSSProperties } from 'react';
 import { Button } from './button';
 import { Container } from './container';
@@ -77,7 +78,9 @@ const MainFeature = ({
                 'after:feature-image-mask2 after:absolute after:inset-0 after:rounded-[inherit] after:bg-white-a15'
               )}
             >
-              <img src={props.image} className='h-auto w-full' />
+              <div className='image-container'>
+                <Image alt={text} fill src={props.image} className='image' />
+              </div>
             </div>
           ) : (
             <Integrations />
@@ -167,13 +170,21 @@ const FeatureCards = ({ features }: FeatureCardProps) => {
         >
           <h4 className='mb-1 text-2xl'>{title}</h4>
           <p className='max-w-[31rem] text-md text-primary-text'>{text}</p>
-          <img
-            src={image}
+          <div
             className={classNames(
-              'pointer-events-none absolute max-w-none select-none rounded-[1.2rem]',
+              'image-container absolute max-w-none',
               imageClass
             )}
-          />
+          >
+            <Image
+              alt={title}
+              fill
+              src={image}
+              className={classNames(
+                'image pointer-events-none absolute select-none rounded-[1.2rem]'
+              )}
+            />
+          </div>
         </div>
       ))}
     </div>

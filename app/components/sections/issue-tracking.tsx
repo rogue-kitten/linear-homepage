@@ -67,13 +67,13 @@ export const IssueTracking = () => {
       <Features.Card
         features={[
           {
-            image: 'image/card-board.webp',
+            image: '/image/card-board.webp',
             imageClass: 'top-[50%] md:top-[40%] w-[200%]',
             title: 'List and board',
             text: 'Switch between list and board layout to view work from any angle.',
           },
           {
-            image: 'image/card-views.webp',
+            image: '/image/card-views.webp',
             imageClass:
               'top-[40%] left-[12px] md:top-[34%] md:left-[24px] w-[110%]',
             title: 'Make it yours',

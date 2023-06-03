@@ -1,6 +1,7 @@
 'use client';
 
 import classNames from 'classnames';
+import Image from 'next/image';
 import { CSSProperties, useEffect, useRef, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
@@ -95,14 +96,17 @@ export const HeroImage = () => {
           <path pathLength='1' d='M220 777L220 1'></path>
           <path pathLength='1' d='M538 777L538 128'></path>
         </svg>
-        <img
-          src='/image/hero.webp'
-          alt='Hero Image'
-          className={classNames(
-            'relative z-10 rounded-lg transition-opacity delay-[680ms] duration-[400ms]',
-            inView ? 'opacity-100' : 'opacity-0'
-          )}
-        />
+        <div className='image-container'>
+          <Image
+            src='/image/hero.webp'
+            alt='Hero Image'
+            fill
+            className={classNames(
+              'image relative z-10 rounded-lg transition-opacity delay-[680ms] duration-[400ms]',
+              inView ? 'opacity-100' : 'opacity-0'
+            )}
+          />
+        </div>
       </div>
     </div>
   );

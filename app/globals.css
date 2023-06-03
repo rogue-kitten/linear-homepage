@@ -148,4 +148,19 @@
     background-size: var(--size) var(--size);
     backdrop-filter: blur(8px);
   }
+
+  image-container {
+    width: 100%;
+  }
+
+  .image-container .image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+  }
+
+  .image-container > div {
+    position: unset !important;
+  }
 }

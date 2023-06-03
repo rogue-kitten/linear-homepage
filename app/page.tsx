@@ -1,6 +1,6 @@
 import { Container } from './components/container';
-import { DownloadApp } from './components/download';
 import { Clients } from './components/sections/clients';
+import { DownloadApp } from './components/sections/download';
 import { HomePageHero } from './components/sections/homepage-hero';
 import { IssueTracking } from './components/sections/issue-tracking';
 import { MomentumCycles } from './components/sections/momentum-cycles';
