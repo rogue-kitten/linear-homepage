@@ -134,10 +134,10 @@ const FeatureGrid = ({ features }: FeaturesGridProps) => {
           ) : (
             <Icon />
           )}
-          <h4 className='inline text-sm font-medium md:text-md'>
+          <h3 className='inline text-sm font-medium md:text-md'>
             <span>{title}</span> <br className='block md:hidden' />
             <span className='text-primary-text'>{text}</span>
-          </h4>
+          </h3>
         </div>
       ))}
     </div>
