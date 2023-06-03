@@ -1,4 +1,5 @@
 import { Container } from './components/container';
+import { DownloadApp } from './components/download';
 import { Clients } from './components/sections/clients';
 import { HomePageHero } from './components/sections/homepage-hero';
 import { IssueTracking } from './components/sections/issue-tracking';
@@ -25,6 +26,9 @@ export default function Home() {
       <Roadmaps />
       <Workflows />
       <StarComponent reverse={true} />
+      <Container className='-translate-y-[15rem]'>
+        <DownloadApp />
+      </Container>
     </>
   );
 }
