@@ -39,7 +39,7 @@ export const Integrations = () => {
       <IconWrapper inView={inView} size='72px' icon={ZendeskIcon} />
       <div
         className={classNames(
-          'relative z-[2] flex h-[14.8rem] w-[14.8rem] items-center justify-center overflow-hidden rounded-[50%]',
+          'relative z-[2] flex h-[14.8rem] w-[14.8rem] shrink-0 items-center justify-center overflow-hidden rounded-full',
           'before:integrations-mask before:absolute before:inset-0 before:rounded-[inherit] before:bg-integrations before:p-[1px]',
           'after:absolute after:inset-0 after:bg-integrations2'
         )}
@@ -66,7 +66,7 @@ export const Integrations = () => {
         size='40px'
         icon={IntercomIcon}
       />
-      <div className='absolute left-1/2 top-1/2 z-0 h-[24.2rem] w-[24.2rem] -translate-x-1/2 -translate-y-1/2 overflow-visible'>
+      <div className='absolute left-1/2 top-1/2 z-0 h-[24.2rem] w-[24.2rem] shrink-0 -translate-x-1/2 -translate-y-1/2 overflow-visible'>
         {ripples.map(({ opacity, delay, size }) => (
           <div
             key={opacity}

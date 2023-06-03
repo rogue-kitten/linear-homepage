@@ -26,7 +26,7 @@ export default function RootLayout({
       <body>
         <div>
           <Header />
-          <main className='overflow-hidden bg-page-gradient pt-[var(--navigation-height)]'>
+          <main className='mb-16 overflow-hidden bg-page-gradient pt-[var(--navigation-height)]'>
             {children}
           </main>
           <Footer />

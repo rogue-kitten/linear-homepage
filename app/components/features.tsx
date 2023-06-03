@@ -92,7 +92,11 @@ const MainFeature = ({
           {text}
         </p>
         {'buttonChildren' in props && (
-          <Button size='small' variant='secondary' className='-mt-3 mb-12'>
+          <Button
+            size='small'
+            variant='secondary'
+            className='mb-12 mt-8 md:-mt-3'
+          >
             {props.buttonChildren}
           </Button>
         )}
@@ -119,11 +123,11 @@ const FeatureGrid = ({ features }: FeaturesGridProps) => {
           className='col-span-2 mx-auto max-w-none leading-relaxed md:max-w-[25.6rem] [&_svg]:mb-1 [&_svg]:mr-[0.6rem] [&_svg]:h-4 [&_svg]:w-4 [&_svg]:fill-white [&_svg]:md:inline'
         >
           {Array.isArray(Icon) ? (
-            <>
+            <div className='flex md:inline'>
               {Icon.map((Elem, idx) => (
                 <Elem key={idx} />
               ))}
-            </>
+            </div>
           ) : (
             <Icon />
           )}

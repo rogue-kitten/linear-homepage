@@ -26,7 +26,7 @@ export default function Home() {
       <Roadmaps />
       <Workflows />
       <StarComponent reverse={true} />
-      <Container className='-translate-y-[15rem]'>
+      <Container>
         <DownloadApp />
       </Container>
     </>
